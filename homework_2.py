@@ -1,6 +1,5 @@
 import datetime as d
 
-
 print("Witamy w generatorze życzeń urodzinowych!")
 imie_nad = input("Podaj swoje imię: ")
 imie_odb = input("Podaj imię solenizanta: ")
