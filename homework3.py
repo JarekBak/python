@@ -14,11 +14,13 @@ for paczki in range(liczba_el):
     else:
         waga_paczki = waga_paczki + waga_el
         i += 1
-# zliczanie pustego miejsca w paczce
-puste = max_paczki - waga_paczki
+        if waga_paczki > max_paczki:
+            print("Za ciężka paczka")
+        # zliczanie pustego miejsca w paczce
+        puste = max_paczki - waga_paczki
 
 # komunikat końcowy
-print(f"\n--- PODSUMOWANIE --- \n Liczba elementów w paczce: {i} \n Waga paczki: {waga_paczki} kg \n "
+print(f"\n--- PODSUMOWANIE --- \n Liczba elementów w paczce: {i} \n Waga paczki: {waga_paczki} kg \n"
       f"Puste miejsce w paczce: {puste} kg")
 
 if waga_paczki == 0:
