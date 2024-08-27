@@ -4,6 +4,7 @@ liczba_el = int(input("Podaj liczbę elementów do wysłania: "))
 i = 0
 waga_paczki = 0
 max_paczki = 20
+l_paczek = 0
 
 for paczki in range(liczba_el):
     # podajemy dane o elementach do spakowania
@@ -14,13 +15,17 @@ for paczki in range(liczba_el):
     else:
         waga_paczki = waga_paczki + waga_el
         i += 1
-        if waga_paczki > max_paczki:
-            print("Za ciężka paczka")
+        # sprawdzenie wagi paczki
+        if waga_paczki > 20:
+            l_paczek += 1
         # zliczanie pustego miejsca w paczce
         puste = max_paczki - waga_paczki
 
 # komunikat końcowy
-print(f"\n--- PODSUMOWANIE --- \n Liczba elementów w paczce: {i} \n Waga paczki: {waga_paczki} kg \n"
+print(f"\n--- PODSUMOWANIE --- \n "
+      f"Liczba elementów do wysłania: {i} \n "
+      f"Liczba wysłanych paczek: {l_paczek} \n "
+      f"Waga paczki: {waga_paczki} kg \n "
       f"Puste miejsce w paczce: {puste} kg")
 
 if waga_paczki == 0:
