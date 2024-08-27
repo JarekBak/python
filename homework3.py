@@ -13,5 +13,10 @@ for paczki in range(liczba_el):
     else:
         waga_paczki = waga_paczki + waga_el
         i += 1
+# zliczanie pustego miejsca w paczce
+puste = 20 - waga_paczki
 
-print(f"\n--- PODSUMOWANIE --- \n Liczba elementów w paczce: {i} \n Waga paczki: {waga_paczki} kg")
+print(f"\n--- PODSUMOWANIE --- \n Liczba elementów w paczce: {i} \n Waga paczki: {waga_paczki} kg \n Puste miejsce w paczce: {puste} kg")
+
+if waga_paczki == 0:
+    print("BRAK MOŻLIWOŚCI WYSŁANIA PACZKI!")
