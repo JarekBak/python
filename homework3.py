@@ -41,17 +41,16 @@ for paczki in range(liczba_el):
         # sprawdzenie pustego miejsca w paczce
         puste_miejsce = max_paczki - nowa_waga_paczki
 
-        print(f"Waga paczki {l_paczek}: {nowa_waga_paczki}")
-        print(f"W paczce zostało {puste_miejsce} kg")
-
         # weryfikacja, w której paczce jest najwięcej pustego miejsca
         if puste_miejsce > max_puste_miejsce:
             max_puste_miejsce = puste_miejsce
             nr_paczki_puste_miejsce = l_paczek
-        else:
-            n_puste_miejsce = puste_miejsce
 
+        print(f"Waga paczki {l_paczek}: {nowa_waga_paczki}")
+        print(f"W paczce zostało {puste_miejsce} kg")
+
+print("\n" + "-" * 5 + "PODSUMOWANIE" + "-" * 5)
 print(f"Liczba wysłanych paczek: {l_paczek}")
 print(f"W sumie wysłano: {waga_sum} kg")
 print(f"Najwięcej pustego miejsca jest w paczce nr {nr_paczki_puste_miejsce}")
-print(f"Zostało w niej {n_puste_miejsce} kg")
+print(f"Zostało w niej {puste_miejsce} kg")
