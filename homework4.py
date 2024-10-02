@@ -65,6 +65,9 @@ while True:
                 saldo_zwiekszenie.append(kwota_sprzedazy)
                 print(f"Zakutalizowano liczbę produktów w magazynie dla produktu: {produkt_nazwa}")
                 print(f"Kwota sprzedaży: {kwota_sprzedazy}")
+                # warunek dla którego jeżeli liczba = 0 produkt jest usuwany z listy produktów na magazynie
+                if produkt_all[produkt_nazwa][0] == 0:
+                    del produkt_all[produkt_nazwa]
             else:
                 print(f"Brak wystarczającej liczby produktów w magazynie - dostępne {produkt_all[produkt_nazwa][0]} szt.")
 
