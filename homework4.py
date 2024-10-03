@@ -12,7 +12,7 @@ produkt_all = {
 suma_konta = 0
 kwota_zakupu = 0
 kwota_sprzedazy = 0
-saldo = []
+przeglad = []
 # Główna pętla programu
 while True:
     print(5 * "-" + "SYSTEM KSIĘGOWO-MAGAZYNOWY" + 5 * "-")
@@ -36,15 +36,14 @@ while True:
         """)
 
     elif komenda == "SALDO":
-        # przedstawienie wyników w formie tabelarycznej. Lista uzupełnia się tylko w trakcie działąnia programu
-        print("Lista operacji na koncie")
-        print("-" * 30)
-
-        saldo_data_headers = ['Rodzaj transakcji', 'Kwota']
-        table = pd.DataFrame(saldo, columns=saldo_data_headers)
-        print(table)
-
-        print("-" * 30)
+        if kwota_zakupu:
+            print(f"Zmniejszono stan konta o {kwota_zakupu}")
+            kwota_zakupu = 0
+        elif kwota_sprzedazy:
+            print(f"Zwiększono stan o konta o {kwota_sprzedazy}")
+            kwota_sprzedazy = 0
+        else:
+            print("Brak nowych transakcji na koncie. Wpisz 'PRZEGLAD', aby przejżeć historię operacji")
 
     elif komenda == "SPRZEDAZ":
         produkt_nazwa = input("Podaj nazwę sprzedawanego produktu: ")
@@ -74,7 +73,7 @@ while True:
         else:
             print("Brak takiego towaru w magazynie. Transakcja niemożliwa")
 
-        saldo.append(saldo_zwiekszenie)
+        przeglad.append(saldo_zwiekszenie)
 
     elif komenda == "ZAKUP":
         # Sprawdzamy dwa przypadki: [1] produkt już jest magazynie lub [2] dodajemy nowy produkt do magazynu
@@ -118,7 +117,7 @@ while True:
             else:
                 print("Brak odpowiednich środków na koncie. Transakcja niemożliwa")
 
-        saldo.append(saldo_zmniejszenie)
+        przeglad.append(saldo_zmniejszenie)
 
     elif komenda == "KONTO":
         suma_materialow = 0
@@ -144,7 +143,30 @@ while True:
             print("Brak towaru w magazynie")
 
     elif komenda == "PRZEGLAD":
-        print(f"Wprowadziłeś komendę {komenda}")
+        # przedstawienie wyników w formie tabelarycznej. Lista uzupełnia się tylko w trakcie działąnia programu
+
+        print("-" * 30)
+
+        saldo_data_headers = ['Rodzaj transakcji', 'Kwota']
+        table = (pd.DataFrame(przeglad, columns=saldo_data_headers))
+        liczba_transakcji = len(table)
+        print(f"Liczba wykonanych transakcji: {liczba_transakcji}")
+        print("-" * 30)
+        print("Lista operacji na koncie:\n")
+        print(table)
+        print("-" * 30, "\n")
+        od = int(input("Podaj nr pierwszej transakcji: "))
+        if od == "":
+            od = 0
+        else:
+            od = od
+        do = int(input("Podaj nr ostatniej transakcji: "))
+        if do == "":
+            do = liczba_transakcji
+        else:
+            do = do
+        tr = table.iloc[od:do]
+        print(tr)
 
     else:
         print("Nieznana komenda. Wpisz 'HELP', aby uzyskać informację na temat dostępnych komend w programie")
