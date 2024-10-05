@@ -30,20 +30,33 @@ while True:
         4. KONTO - wyświetla aktualny stan konta, oraz wartość produktów na magazynie
         5. LISTA - wyświetla całkowity stan magazynu
         6. MAGAZYN - wyświtla stan magazynu dla konkretnego produktu
-        7. PRZEGLAD
+        7. PRZEGLAD - wyświetla listę operacji wykonywanych w programie
         8. HELP - wyświetla listę dostępnych komend w programie
         9. KONIEC - zakończenie działania programu
         """)
 
     elif komenda == "SALDO":
+        saldo = []
         if kwota_zakupu:
             print(f"Zmniejszono stan konta o {kwota_zakupu}")
-            kwota_zakupu = 0
+            saldo.append(komenda)
+            saldo.append('zmniejszenie')
+            saldo.append(kwota_zakupu)
+            # kwota_zakupu = 0
         elif kwota_sprzedazy:
             print(f"Zwiększono stan o konta o {kwota_sprzedazy}")
-            kwota_sprzedazy = 0
+            saldo.append(komenda)
+            saldo.append('zwiększenie')
+            saldo.append(kwota_sprzedazy)
+            # kwota_sprzedazy = 0
         else:
             print("Brak nowych transakcji na koncie. Wpisz 'PRZEGLAD', aby przejżeć historię operacji")
+            saldo.append(komenda)
+            saldo.append('brak nowych transakcji')
+            saldo.append(0)
+        przeglad.append(saldo)
+        kwota_zakupu = 0
+        kwota_sprzedazy = 0
 
     elif komenda == "SPRZEDAZ":
         produkt_nazwa = input("Podaj nazwę sprzedawanego produktu: ")
@@ -60,6 +73,7 @@ while True:
                 # wyliczenie kwoty, którą należy dodać do konta
                 kwota_sprzedazy = (liczba * produkt_all[produkt_nazwa][1])
                 suma_konta += kwota_sprzedazy
+                saldo_zwiekszenie.append(komenda)
                 saldo_zwiekszenie.append('zwiekszenie')
                 saldo_zwiekszenie.append(kwota_sprzedazy)
                 print(f"Zakutalizowano liczbę produktów w magazynie dla produktu: {produkt_nazwa}")
@@ -69,7 +83,6 @@ while True:
                     del produkt_all[produkt_nazwa]
             else:
                 print(f"Brak wystarczającej liczby produktów w magazynie - dostępne {produkt_all[produkt_nazwa][0]} szt.")
-
         else:
             print("Brak takiego towaru w magazynie. Transakcja niemożliwa")
 
@@ -92,6 +105,7 @@ while True:
                 print("Brak odpowiednich środków na koncie. Transakcja niemożliwa")
             else:
                 suma_konta -= kwota_zakupu
+                saldo_zmniejszenie.append(komenda)
                 saldo_zmniejszenie.append("zmniejszenie")
                 saldo_zmniejszenie.append(kwota_zakupu)
                 print(f"Zakutalizowano liczbę produktów w magazynie dla produktu: {produkt_nazwa}")
@@ -110,6 +124,7 @@ while True:
             if kwota_zakupu < suma_konta:
                 suma_konta -= kwota_zakupu
                 produkt_all[produkt_nazwa] = produkt
+                saldo_zmniejszenie.append(komenda)
                 saldo_zmniejszenie.append("zmniejszenie")
                 saldo_zmniejszenie.append(kwota_zakupu)
                 print(f"Dodano produkt: {produkt_nazwa} do magazynu. Ilość produktu: {liczba}")
@@ -146,28 +161,43 @@ while True:
         # przedstawienie wyników w formie tabelarycznej. Lista uzupełnia się tylko w trakcie działąnia programu
 
         print("-" * 30)
-
-        saldo_data_headers = ['Rodzaj transakcji', 'Kwota']
+        # tworzenie tabeli z listą komend wpisywanych w programie
+        saldo_data_headers = ['Rodzaj komendy', 'Rodzaj operacji na koncie', 'Kwota']
         table = (pd.DataFrame(przeglad, columns=saldo_data_headers))
-        liczba_transakcji = len(table)
-        print(f"Liczba wykonanych transakcji: {liczba_transakcji}")
+        liczba_komend = len(table)
+        print(f"Liczba wpisanych komend w programie: {liczba_komend}")
         print("-" * 30)
-        print("Lista operacji na koncie:\n")
-        print(table)
-        print("-" * 30, "\n")
-        od = input("Podaj nr pierwszej transakcji: ")
+
+        od = input("Podaj nr [OD] operacji w programie: ")
+        # warunek dla pustego wpisu
         if od == '':
-            od = 0
+            od = 1
+        # warunek dla wpisania zbyt dużej wartości odnośnie listy komend
+        elif int(od) > liczba_komend:
+            print(f"Podałeś zbyt dużą wartość - liczba wykonanych komend: {liczba_komend}")
+            continue
         else:
             od = od
-        do = input("Podaj nr ostatniej transakcji: ")
+        do = input("Podaj nr [DO] operacji w programie: ")
+        # warunek dla pustego wpisu
         if do == '':
-            do = liczba_transakcji
+            do = liczba_komend
+        # warunek dla wpisania zbyt dużej wartości odnośnie listy komend
+        elif int(do) > liczba_komend:
+            print(f"Podałeś zbyt dużą wartość - liczba wykonanych komend: {liczba_komend}")
+            continue
         else:
             do = do
-        tr = przeglad[int(od):int(do)]
-        for i in tr:
-            print(i)
+        # warunek, gdy użytkownik wpisze tę samą wartość w obie pozycje
+        if od == do:
+            tr = table.iloc[int(od) - 1: int(od)]
+        else:
+            tr = table.iloc[int(od) - 1:int(do)]
+        print("-" * 30, "\n")
+        print("Lista operacji na koncie:")
+        print("-" * 30)
+        print(tr)
+        print("-" * 30, "\n")
 
     else:
         print("Nieznana komenda. Wpisz 'HELP', aby uzyskać informację na temat dostępnych komend w programie")
