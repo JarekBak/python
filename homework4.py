@@ -155,18 +155,19 @@ while True:
         print("Lista operacji na koncie:\n")
         print(table)
         print("-" * 30, "\n")
-        od = int(input("Podaj nr pierwszej transakcji: "))
-        if od == "":
+        od = input("Podaj nr pierwszej transakcji: ")
+        if od == '':
             od = 0
         else:
             od = od
-        do = int(input("Podaj nr ostatniej transakcji: "))
-        if do == "":
+        do = input("Podaj nr ostatniej transakcji: ")
+        if do == '':
             do = liczba_transakcji
         else:
             do = do
-        tr = table.iloc[od:do]
-        print(tr)
+        tr = przeglad[int(od):int(do)]
+        for i in tr:
+            print(i)
 
     else:
         print("Nieznana komenda. Wpisz 'HELP', aby uzyskać informację na temat dostępnych komend w programie")
