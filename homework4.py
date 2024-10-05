@@ -9,10 +9,12 @@ produkt_all = {
         "Szafa 200x220": [1, 1200],
         "Szafa 180x220": [2, 1000]
 }
+
 suma_konta = 0
 kwota_zakupu = 0
 kwota_sprzedazy = 0
 przeglad = []
+
 # Główna pętla programu
 while True:
     print(5 * "-" + "SYSTEM KSIĘGOWO-MAGAZYNOWY" + 5 * "-")
@@ -110,6 +112,7 @@ while True:
                 saldo_zmniejszenie.append(kwota_zakupu)
                 print(f"Zakutalizowano liczbę produktów w magazynie dla produktu: {produkt_nazwa}")
                 print(f"Kwota zakupu (przypadek 1): {kwota_zakupu}")
+
         # Przypadek [2]
         else:
             print("Brak towaru. Dodaję towar do magazynu")
@@ -178,6 +181,7 @@ while True:
             continue
         else:
             od = od
+
         do = input("Podaj nr [DO] operacji w programie: ")
         # warunek dla pustego wpisu
         if do == '':
@@ -188,6 +192,7 @@ while True:
             continue
         else:
             do = do
+
         # warunek, gdy użytkownik wpisze tę samą wartość w obie pozycje
         if od == do:
             tr = table.iloc[int(od) - 1: int(od)]
