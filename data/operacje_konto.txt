@@ -1,0 +1,4 @@
+2024-11-03 17:29:24.759233, zwiekszenie stanu konta, 2000
+2024-11-03 17:30:42.268684, zmniejszenie stanu konta, 2400
+2024-11-03 17:34:19.776643, zwiekszenie stanu konta, 500
+2024-11-03 17:39:27.586582, zmniejszenie stanu konta, 1200

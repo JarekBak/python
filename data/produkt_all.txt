@@ -1,0 +1,9 @@
+Stół 120x90, 3, 250
+Stół 90x90, 5, 150
+Krzesło model 1, 12, 100
+Krzesło model 2, 6, 120
+Szafa 200x220, 1, 1200
+Szafa 180x220, 3, 1000
+Sofa m2, 1, 500
+Sofa, 7, 1200
+Szafa model 5, 3, 800
