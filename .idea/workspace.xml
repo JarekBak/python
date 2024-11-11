@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7557cec6-6050-4e98-adf6-4423b3248ef0" name="Changes" comment="finalna wersja programu">
+    <list default="true" id="7557cec6-6050-4e98-adf6-4423b3248ef0" name="Changes" comment="dodano w utills.py w funkcji zakup_produktu możliwość aktualizacji stanu konta [wiersze: 156-164]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/operacje_konto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/operacje_konto.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/produkt_all.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/produkt_all.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stan_konta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/stan_konta.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730652702948</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dodano w utills.py w funkcji zakup_produktu możliwość aktualizacji stanu konta [wiersze: 156-164]">
+      <option name="closed" value="true" />
+      <created>1731365809330</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731365809330</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finalna wersja programu" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalna wersja programu" />
+    <MESSAGE value="dodano w utills.py w funkcji zakup_produktu możliwość aktualizacji stanu konta [wiersze: 156-164]" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodano w utills.py w funkcji zakup_produktu możliwość aktualizacji stanu konta [wiersze: 156-164]" />
   </component>
 </project>
