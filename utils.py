@@ -163,10 +163,6 @@ def zakup_produktu(produkt_all):
             print(f"Zakutalizowano liczbę produktów w magazynie dla produktu: {produkt_nazwa}")
             print(f"Kwota zakupu (przypadek 1): {kwota_zakupu}")
 
-        # # zapisanie wykonanej czynności w historii operacji na koncie
-        # saldo.update({datetime.now(): ['zmniejszenie stanu konta', kwota_zakupu]})
-        # aktualizuj_operacje(saldo)
-
     # Przypadek [2]
     else:
         print("Brak towaru. Dodaję towar do magazynu")
@@ -177,9 +173,16 @@ def zakup_produktu(produkt_all):
         produkt.append(cena)
         # wyliczenie kwoty do ściągnięcia z konta
         kwota_zakupu = (liczba * cena)
-        produkt_all[produkt_nazwa] = produkt
-        print(f"Dodano produkt: {produkt_nazwa} do magazynu. Ilość produktu: {liczba}")
-        print(f"Kwota zakupu (przypadek 2): {kwota_zakupu}")
+        # weryfikacja stanu konta
+        stan_konta = int(odczytaj_stan_konta())
+        if kwota_zakupu > stan_konta:
+            print("Brak odpowiednich środków na koncie. Transakcja niemożliwa")
+        else:
+            produkt_all[produkt_nazwa] = produkt
+            global_var.suma_konta = stan_konta - kwota_zakupu
+            zapisz_stan_konta()
+            print(f"Dodano produkt: {produkt_nazwa} do magazynu. Ilość produktu: {liczba}")
+            print(f"Kwota zakupu (przypadek 2): {kwota_zakupu}")
 
     # zapisanie wykonanej czynności w historii operacji na koncie
     saldo.update({datetime.now(): ['zmniejszenie stanu konta', kwota_zakupu]})

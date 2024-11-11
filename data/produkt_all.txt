@@ -7,3 +7,5 @@ Szafa 180x220, 3, 1000
 Sofa m2, 1, 500
 Sofa, 7, 1200
 Szafa model 5, 3, 800
+krzeslo3, 1, 180
+krzeslo4, 1, 200

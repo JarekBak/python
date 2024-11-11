@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7557cec6-6050-4e98-adf6-4423b3248ef0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/python_zajecia_9-10.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constans.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/operacje_konto.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/produkt_all.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/stan_konta.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global_var.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    <list default="true" id="7557cec6-6050-4e98-adf6-4423b3248ef0" name="Changes" comment="finalna wersja programu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/operacje_konto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/operacje_konto.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/produkt_all.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/produkt_all.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stan_konta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/stan_konta.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +42,7 @@
     &quot;Python.utils.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master5&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
 }</component>
@@ -77,6 +67,15 @@
       <option name="presentableId" value="Default" />
       <updated>1729510586581</updated>
     </task>
+    <task id="LOCAL-00001" summary="finalna wersja programu">
+      <option name="closed" value="true" />
+      <created>1730652702948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730652702948</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,5 +118,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finalna wersja programu" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalna wersja programu" />
   </component>
 </project>
