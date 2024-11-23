@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazyn 3.0</title>
+    <meta name="author" content="Jarosław Bakacz"/>
+    <meta name="email" content="j.bakacz76@gmail.com"/>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <style>
+        body {
+            background-color: #e0e0e0
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="index.html" class="navbar-brand mr-2"><b>Strona główna</b></a>
+            <a href="historia.html" class="btn btn-link">Przegląd</a>
+        </section>
+    </header>
+    <div class="text-center">
+        <div class="bg-primary">
+            <h1><strong>System Księgowo - Magazynowy 3.0</strong></h1>
+        </div>
+    </div>
+    <div class="columns col-gapless">
+        <div class="column col-2"></div>
+            <div class="column col-8">
+                <div class="text-center">
+                    <h3>Zakup produktu</h3>
+                        <form class="form-horizontal" method="get" action="index.html">
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="new_product">Nazwa produktu</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="text" name="new_product" id="new_product" placeholder="Nazwa" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="new_quantiti">Ilość produktów</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="number" name="new_quantiti" id="new_quantiti" placeholder="Ilość produktów" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="new_price">Cena produktu</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="number" name="new_price" id="new_price" step="0.01" placeholder="Cena jednostkowa produktu" required>
+                                </div>
+                            </div>
+                        <button class="btn btn-primary" type="submit">Wprowadź produkt</button>
+                        </form>
+                </div>
+                <div class="column col-2"></div>
+            </div>
+    </div>
+        <div class="container">
+            <div class="columns">
+                <div class="column col-2"></div>
+                <div class="column col-8">
+                    <p></p>
+                        <div style="width: 100%; height: 4px; background-color: #a1a1a1;"></div>
+                    <p></p>
+                </div>
+                <div class="column col-2"></div>
+            </div>
+        </div>
+    <div class="columns col-gapless">
+        <div class="column col-2"></div>
+        <div class="column col-8">
+            <div class="text-center">
+                <h3>Sprzedaż produktu</h3>
+                    <form class="form-horizontal" method="get" action="index.html">
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="product">Nazwa produktu</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="text" name="product" id="product" placeholder="Nazwa" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="quantiti">Ilość produktów</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="number" name="quantiti" id="quantiti" placeholder="Ilość produktów" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="price">Cena produktu</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="number" name="price" id="price" step="0.01" placeholder="Cena jednostkowa produktu" required>
+                                </div>
+                            </div>
+                        <button class="btn btn-primary">Sprzedaj produkt</button>
+                    </form>
+            </div>
+            <div class="column col-2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+            <div class="column col-2"></div>
+            <div class="column col-8">
+                <p></p>
+                    <div style="width: 100%; height: 4px; background-color: #a1a1a1;"></div>
+                <p></p>
+            </div>
+            <div class="column col-2"></div>
+        </div>
+    </div>
+    <div class="columns col-gapless">
+        <div class="column col-2"></div>
+            <div class="column col-8">
+                <div class="text-center">
+                    <div class="bg-secondary">
+                        <h3>SALDO - OPERACJE NA KONCIE</h3>
+                    </div>
+                </div>
+            </div>
+        <div class="column col-2"></div>
+        <div class="column col-2"></div>
+        <div class="column col-8">
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                        <label class="form-label" for="saldo_comment">Komentarz</label>
+                        <select class="form-select" id="saldo_comment" name="saldo_comment" required>
+                            <option>---</option>
+                            <option>Zwiększenie stanu konta</option>
+                            <option>Zmniejszenie stanu konta</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="saldo_price">Kwota transakcji</label>
+                        <input class="form-input" type="number" id="saldo_price" name="saldo_price" step="0.01" placeholder="Kwota" required>
+                    </div>
+                <div style="text-align: right;">
+                    <button class="btn btn-success">Wprowadź operację</button>
+                </div>
+                </form>
+            </div>
+        <div class="column col-2"></div>
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+</body>
+</html>

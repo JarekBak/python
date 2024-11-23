@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazyn 3.0 - historia danych</title>
+    <meta name="author" content="Jarosław Bakacz"/>
+    <meta name="email" content="j.bakacz76@gmail.com"/>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <style>
+        body {
+            background-color: #e0e0e0
+        }
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="index.html" class="navbar-brand mr-2">Strona główna</a>
+            <a href="historia.html" class="btn btn-link"><b>Przegląd</b></a>
+        </section>
+    </header>
+    <div class="text-center">
+        <div class="bg-primary">
+            <h1>Magazyn 3.0 - historia danych</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+            <div class="column col-2">
+                <form method="get" action="historia.html">
+                    <div class="form-group">
+                        <label class="form-label" for="operation_from">Nr operacji [OD]</label>
+                        <input class="form-input" type="number" id="operation_from" name="line_from" placeholder="line_from" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="operation_to">Nr operacji [DO]</label>
+                        <input class="form-input" type="number" id="operation_to" name="line_to" placeholder="line_to" min="1" required>
+                    </div>
+                    <button class="btn btn-primary">Filtruj dane</button>
+                </form>
+            </div>
+            <div class="column col-1"></div>
+            <div class="column col-9">
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Czas operacji</th>
+                        <th>Nazwa operacji</th>
+                        <th>Kwota</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="active">
+                        <td>0</td>
+                        <td>2024-11-03 17:29:24.759233</td>
+                        <td>zwiekszenie stanu konta</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr class="active">
+                        <td>1</td>
+                        <td>2024-11-03 17:30:42.268684</td>
+                        <td>zmniejszenie stanu konta</td>
+                        <td>2400</td>
+                    </tr>
+                    <tr class="active">
+                        <td>2</td>
+                        <td>2024-11-03 17:34:19.776643</td>
+                        <td>zwiekszenie stanu konta</td>
+                        <td>500</td>
+                    </tr>
+                    <tr class="active">
+                        <td>3</td>
+                        <td>2024-11-03 17:39:27.586582</td>
+                        <td>zmniejszenie stanu konta</td>
+                        <td>1200</td>
+                    </tr>
+                    <tr class="active">
+                        <td>4</td>
+                        <td>2024-11-11 23:27:06.436065</td>
+                        <td>zmniejszenie stanu konta</td>
+                        <td>180</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
