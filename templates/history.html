@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazyn 3.0 - historia operacji</title>
+    <meta name="author" content="Jarosław Bakacz"/>
+    <meta name="email" content="j.bakacz76@gmail.com"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <style>
+        body {
+            background-color: #e0e0e0
+        }
+        }
+        /* Optional: General styles for toast messages */
+        .toast {
+            margin-top: 1rem;
+        }
+        th {
+            text-align: center;
+        }
+        td {
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="{{ url_for('index') }}" class="navbar-brand mr-2">Strona główna</a>
+            <a href="{{ url_for('history') }}" class="btn btn-link"><b>Przegląd</b></a>
+        </section>
+    </header>
+    <div class="text-center">
+        <div class="bg-primary">
+            <h1>Magazyn 3.0 - historia operacji</h1>
+        </div>
+    </div>
+
+<div class="container mt-5">
+        <div class="columns">
+            <div class="column col-2">
+                <div style="text-align: center;">
+                    <h5>Liczba zarejestrowanych wszystkich operacji</h5>
+                    <h3>{{ count_op }}</h3>
+                </div>
+            </div>
+            <div class="column col-9">
+                {% if error %}
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="toast-container">
+                {% for category, message in messages %}
+                <div class="toast {{ 'toast-error' }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                </div>
+                {% endif %}
+                {% endwith %}
+                {% endif %}
+                {% if data %}
+                {{ data|safe }}
+                {% else %}
+                    <p>Brak historii operacji.</p>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazyn 3.0</title>
+    <meta name="author" content="Jarosław Bakacz">
+    <meta name="email" content="j.bakacz76@gmail.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <style>
+        body {
+            background-color: #e0e0e0
+        }
+        }
+        /* Optional: General styles for toast messages */
+        .toast {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="{{ url_for('index') }}" class="navbar-brand mr-2"><b>Strona główna</b></a>
+            <a href="{{ url_for('history') }}" class="btn btn-link">Przegląd</a>
+        </section>
+    </header>
+    <div class="text-center">
+        <div class="bg-primary">
+            <h1><strong>System Księgowo - Magazynowy 3.0</strong></h1>
+        </div>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="toast-container">
+        {% for category, message in messages %}
+        <div class="toast {{ 'toast-success' if category == 'success' else 'toast-error' }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    <div class="columns col-gapless">
+        <div class="column col-2"></div>
+            <div class="column col-8">
+                <div class="text-center">
+                    <h3>Zakup produktu</h3>
+                        <form class="form-horizontal" method="POST" action="{{ url_for('index') }}">
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="new_product">Nazwa produktu</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="text" name="new_product" id="new_product" placeholder="Nazwa" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="new_quantity">Ilość produktów</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="number" name="new_quantity" id="new_quantity" placeholder="Ilość produktów" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="new_price">Cena produktu</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="number" name="new_price" id="new_price" step="0.01" placeholder="Cena jednostkowa produktu" required>
+                                </div>
+                            </div>
+                        <button class="btn btn-primary" type="submit" name="button" value="add_product">Wprowadź produkt</button>
+                        </form>
+                </div>
+                <div class="column col-2"></div>
+            </div>
+    </div>
+        <div class="container">
+            <div class="columns">
+                <div class="column col-2"></div>
+                <div class="column col-8">
+                    <p></p>
+                        <div style="width: 100%; height: 4px; background-color: #a1a1a1;"></div>
+                    <p></p>
+                </div>
+                <div class="column col-2"></div>
+            </div>
+        </div>
+    <div class="columns col-gapless">
+        <div class="column col-2"></div>
+        <div class="column col-8">
+            <div class="text-center">
+                <h3>Sprzedaż produktu</h3>
+                    <form class="form-horizontal" method="POST" action="{{ url_for('index') }}">
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="product">Nazwa produktu</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="text" name="product" id="product" placeholder="Nazwa" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-3 col-sm-12">
+                                    <label class="form-label" for="quantity">Ilość produktów</label>
+                                </div>
+                                <div class="col-9 col-sm-12">
+                                    <input class="form-input" type="number" name="quantity" id="quantity" placeholder="Ilość produktów" required>
+                                </div>
+                            </div>
+                        <button class="btn btn-primary" type="submit" name="button" value="sell_product">Sprzedaj produkt</button>
+                    </form>
+            </div>
+            <div class="column col-2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+            <div class="column col-2"></div>
+            <div class="column col-8">
+                <p></p>
+                    <div style="width: 100%; height: 4px; background-color: #a1a1a1;"></div>
+                <p></p>
+            </div>
+            <div class="column col-2"></div>
+        </div>
+    </div>
+    <div class="columns col-gapless">
+        <div class="column col-2"></div>
+            <div class="column col-8">
+                <div class="text-center">
+                    <div class="bg-primary">
+                        <h3>STAN KONTA: <b>{{ account }} PLN</b></h3>
+                    </div>
+                </div>
+            </div>
+        <div class="column col-2"></div>
+        <div class="column col-2"></div>
+            <div class="column col-8">
+                <div class="text-center">
+                    <div class="bg-secondary">
+                        <h3>STAN MAGAZYNU</h3>
+                    </div>
+                </div>
+            </div>
+        <div class="column col-2"></div>
+        <div class="column col-2"></div>
+        <div class="column col-8">
+            <div class="container">
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th>Nazwa produktu</th>
+                      <th>Ilość na magazynie</th>
+                      <th>Cena jednostkowa towaru</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for product in products %}
+                    <tr class="active">
+                          <td>{{ product.item_name }}</td>
+                          <td>{{ product.quantity }}</td>
+                          <td>{{ product.price }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+            </div>
+        <div class="column col-2"></div>
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+</body>
+</html>
