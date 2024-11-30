@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f7d35be-2bca-45b3-bef9-d1f5c0fe5bbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/python_zajecia_19-20.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/in.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/in.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/in.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_9.py" afterDir="false" />
+    <list default="true" id="4f7d35be-2bca-45b3-bef9-d1f5c0fe5bbd" name="Changes" comment="poprawiono format pliku json (lista list)">
+      <change afterPath="$PROJECT_DIR$/data/in.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/out.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/out.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/out.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/in.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/in.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_9.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework_9.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +30,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -44,14 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.homework_9.executor&quot;: &quot;Run&quot;,
-    &quot;Python.plikiklasy.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.excersise.executor": "Run",
+    "Python.homework_9.executor": "Run",
+    "Python.plikiklasy.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master9",
+    "last_opened_file_path": "C:/Users/jaroslaw.bakacz/PycharmProjects/TUW/python_zajecia_19-20/data"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jaroslaw.bakacz\PycharmProjects\TUW\python_zajecia_19-20\data" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,6 +72,39 @@
       <option name="presentableId" value="Default" />
       <updated>1731178081619</updated>
     </task>
+    <task id="LOCAL-00001" summary="Wersja programu do sprawdzenia">
+      <option name="closed" value="true" />
+      <created>1732212629590</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732212629590</updated>
+    </task>
+    <task id="LOCAL-00002" summary="poprawiono format pliku json (lista list)">
+      <option name="closed" value="true" />
+      <created>1732912653318</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732912653318</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Wersja programu do sprawdzenia" />
+    <MESSAGE value="poprawiono format pliku json (lista list)" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawiono format pliku json (lista list)" />
   </component>
 </project>
