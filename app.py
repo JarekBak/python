@@ -26,7 +26,6 @@ def get_products():
 
     return products
 
-
 def show_table_operations():
     """
     Funkcja zwracająca wszystkie zapisane operacje w pliku SALDO
@@ -36,7 +35,6 @@ def show_table_operations():
     # table_html = df.to_html(classes="table table-striped table-hover", index=True)
     # return table_html
     return df
-
 
 def log_operation(operation, item_name, quantity):
     """
@@ -60,7 +58,6 @@ def log_operation(operation, item_name, quantity):
             )
     except Exception as e:
         print(f"Wystąpił błąd {e}")
-
 
 def count_operation():
     """
@@ -150,9 +147,6 @@ def add_product():
             return redirect(url_for("index"))
         except Exception as e:
             flash(f"Wystąpił błąd podczas dodawania produktu: {e}", "error")
-            # return render_template("index.html")
-
-    # return redirect(url_for("index"))
 
 
 def sell_product():
@@ -205,7 +199,7 @@ def sell_product():
 
         except Exception as e:
             flash(f"Wystąpił błąd podczas sprzedaży produktu: {e}", "error")
-            # return render_template("index.html")
+
 
 @app.route("/action_button", methods=["POST"])
 def action_button():
