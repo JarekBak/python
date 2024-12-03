@@ -3,7 +3,7 @@ import os.path
 import pandas as pd
 
 from datetime import datetime
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, redirect, url_for
 from constants import BAZA_PRODUKT, KONTO, SALDO
 from models import Product
 
@@ -145,11 +145,15 @@ def add_product():
                     f"Dodano nowy produkt {new_product} w ilości: {new_quantity} szt.",
                     "success"
                 )
-            log_operation(operation, new_product, new_quantity)
 
+            log_operation(operation, new_product, new_quantity)
+            return redirect(url_for("index"))
         except Exception as e:
             flash(f"Wystąpił błąd podczas dodawania produktu: {e}", "error")
-            return render_template("index.html")
+            # return render_template("index.html")
+
+    # return redirect(url_for("index"))
+
 
 def sell_product():
     """
@@ -197,11 +201,13 @@ def sell_product():
                 writer = csv.DictWriter(file_product, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows(products)
+            return redirect(url_for("index"))
 
         except Exception as e:
             flash(f"Wystąpił błąd podczas sprzedaży produktu: {e}", "error")
-            return render_template("index.html")
+            # return render_template("index.html")
 
+@app.route("/action_button", methods=["POST"])
 def action_button():
     """
     Funkcja na podstawie której w zależności od rodzaju operacji i użyciu różnych przycisków na stronie wykonywana jest
@@ -210,22 +216,20 @@ def action_button():
     """
     action = request.form.get("button")
     if action == "add_product":
-        new_product = add_product()
-        return render_template("index.html", new_product=new_product)
+        return add_product()
     elif action == "sell_product":
-        sells = sell_product()
-        return render_template("index.html", sells=sells)
+        return sell_product()
+    # W razie niepoprawnej akcji przekieruj na stronę główną
+    return redirect(url_for("index"))
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["GET"])
 def index():
     products = get_products()
-    action = action_button()
     account = account_balance()
 
     return render_template(
         "index.html",
         products=products,
-        action=action,
         account=account,
         )
 

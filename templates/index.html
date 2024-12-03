@@ -48,12 +48,13 @@
             <div class="column col-8">
                 <div class="text-center">
                     <h3>Zakup produktu</h3>
-                        <form class="form-horizontal" method="POST" action="{{ url_for('index') }}">
+                        <form class="form-horizontal" method="POST" action="{{ url_for('action_button') }}">
                             <div class="form-group">
                                 <div class="col-3 col-sm-12">
                                     <label class="form-label" for="new_product">Nazwa produktu</label>
                                 </div>
                                 <div class="col-9 col-sm-12">
+                                    <input type="hidden" name="button" value="add_product">
                                     <input class="form-input" type="text" name="new_product" id="new_product" placeholder="Nazwa" required>
                                 </div>
                             </div>
@@ -95,12 +96,13 @@
         <div class="column col-8">
             <div class="text-center">
                 <h3>Sprzedaż produktu</h3>
-                    <form class="form-horizontal" method="POST" action="{{ url_for('index') }}">
+                    <form class="form-horizontal" method="POST" action="{{ url_for('action_button') }}">
                             <div class="form-group">
                                 <div class="col-3 col-sm-12">
                                     <label class="form-label" for="product">Nazwa produktu</label>
                                 </div>
                                 <div class="col-9 col-sm-12">
+                                    <input type="hidden" name="button" value="sell_product">
                                     <input class="form-input" type="text" name="product" id="product" placeholder="Nazwa" required>
                                 </div>
                             </div>
@@ -161,7 +163,7 @@
                   </thead>
                   <tbody>
                     {% for product in products %}
-                    <tr class="active">
+                    <tr>
                           <td>{{ product.item_name }}</td>
                           <td>{{ product.quantity }}</td>
                           <td>{{ product.price }}</td>

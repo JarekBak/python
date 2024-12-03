@@ -1,60 +1,4 @@
 date,operation,item_name,quantity
-2024-11-24 23:03:00,Zwiększono liczbę produktów w bazie,test3,3
-2024-11-24 23:03:00,Sprzedano produkt,,
-2024-11-24 23:07:57,Dodano nowy produkt,,
-2024-11-24 23:07:57,Sprzedano produkt,test3,3
-2024-11-24 23:08:27,Dodano nowy produkt,test4,10
-2024-11-24 23:08:27,Sprzedano produkt,,
-2024-11-24 23:08:48,Dodano nowy produkt,test5,4
-2024-11-24 23:08:48,Sprzedano produkt,,
-2024-11-24 23:11:50,Dodano nowy produkt,test6,8
-2024-11-24 23:11:50,Sprzedano produkt,,
-2024-11-24 23:12:50,Dodano nowy produkt,test7,7
-2024-11-24 23:12:50,Sprzedano produkt,,
-2024-11-25 21:36:35,Dodano nowy produkt,test8,1
-2024-11-25 21:36:35,Sprzedano produkt,,
-2024-11-25 21:47:24,Dodano nowy produkt,,
-2024-11-25 21:47:24,Sprzedano produkt,test7,3
-2024-11-25 21:48:42,Dodano nowy produkt,test9,5
-2024-11-25 21:51:43,Dodano nowy produkt,test10,4
-2024-11-25 21:52:35,Dodano nowy produkt,,
-2024-11-25 21:52:35,Sprzedano produkt,test10,3
-2024-11-25 22:46:25,Dodano nowy produkt,,
-2024-11-25 22:46:25,Sprzedano produkt,test9,2
-2024-11-25 22:47:24,Dodano nowy produkt,test11,6
-2024-11-26 19:02:39,Dodano nowy produkt,test13,2
-2024-11-26 19:02:39,Zwiększono liczbę produktów w bazie,test13,2
-2024-11-26 19:03:18,Dodano nowy produkt,test14,5
-2024-11-26 19:03:18,Zwiększono liczbę produktów w bazie,test14,5
-2024-11-26 19:06:40,Dodano nowy produkt,test16,7
-2024-11-26 19:06:40,Zwiększono liczbę produktów w bazie,test16,7
-2024-11-26 19:12:59,Dodano nowy produkt,test17,6
-2024-11-26 19:13:32,Dodano nowy produkt,,
-2024-11-26 19:13:32,Sprzedano produkt,test14,5
-2024-11-26 19:16:00,Dodano nowy produkt,,
-2024-11-26 19:16:00,Sprzedano produkt,test16,7
-2024-11-26 19:18:16,Dodano nowy produkt,test1,3
-2024-11-26 19:18:28,Dodano nowy produkt,test2,2
-2024-11-26 19:23:46,Dodano nowy produkt,,
-2024-11-26 19:23:46,Sprzedano produkt,test1,2
-2024-11-26 19:34:08,Dodano nowy produkt,,
-2024-11-26 19:34:08,Sprzedano produkt,test16,3
-2024-11-26 19:40:04,Zwiększono liczbę produktów w bazie,test16,3
-2024-11-26 19:46:56,Dodano nowy produkt,test4,4
-2024-11-26 19:47:21,Zwiększono liczbę produktów w bazie,test4,5
-2024-11-26 19:47:53,Dodano nowy produkt,,
-2024-11-26 19:47:53,Sprzedano produkt,test4,3
-2024-11-26 19:56:12,Dodano nowy produkt,,
-2024-11-26 19:56:12,Sprzedano produkt,test4,2
-2024-11-26 20:03:46,Dodano nowy produkt,,
-2024-11-26 20:03:46,Sprzedano produkt,test4,2
-2024-11-26 20:09:23,Zwiększono liczbę produktów w bazie,test4,2
-2024-11-26 20:10:15,Zwiększono liczbę produktów w bazie,test4,2
-2024-11-26 20:11:08,Zwiększono liczbę produktów w bazie,test4,2
-2024-11-26 20:12:10,Zwiększono liczbę produktów w bazie,test4,2
-2024-11-26 20:12:58,Zwiększono liczbę produktów w bazie,test4,2
-2024-11-26 20:14:02,Dodano nowy produkt,test5,5
-2024-11-26 20:16:18,Dodano nowy produkt,,
 2024-11-26 20:22:28,Zwiększono liczbę produktów w bazie,test1,3
 2024-11-26 20:23:50,Zwiększono liczbę produktów w bazie,test1,1
 2024-11-26 20:25:11,Sprzedano produkt,test1,2
@@ -93,3 +37,19 @@ date,operation,item_name,quantity
 2024-11-29 13:19:47,Sprzedano produkt,test3,2
 2024-11-29 13:19:51,Sprzedano produkt,test3,2
 2024-11-29 13:49:36,Zwiększono liczbę produktów w bazie,test2,2
+2024-12-02 21:13:29,Dodano nowy produkt,test23,1
+2024-12-02 21:20:10,Dodano nowy produkt,test25,1
+2024-12-02 21:21:51,Dodano nowy produkt,test26,1
+2024-12-02 21:33:07,Dodano nowy produkt,test27,1
+2024-12-02 21:33:33,Sprzedano produkt,test5,2
+2024-12-02 21:37:38,Dodano nowy produkt,test27,2
+2024-12-02 21:39:41,Dodano nowy produkt,test28,1
+2024-12-02 21:45:50,Dodano nowy produkt,test29,1
+2024-12-02 21:46:04,Sprzedano produkt,test27,1
+2024-12-02 21:46:04,Sprzedano produkt,test27,1
+2024-12-03 08:20:33,Dodano nowy produkt,test30,1
+2024-12-03 08:20:54,Dodano nowy produkt,test31,2
+2024-12-03 08:22:38,Sprzedano produkt,test31,1
+2024-12-03 08:25:26,Dodano nowy produkt,test32,4
+2024-12-03 08:25:39,Dodano nowy produkt,test33,1
+2024-12-03 08:25:46,Sprzedano produkt,test33,1
